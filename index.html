@@ -5,19 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Développeur Créatif</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   </head>
   <body class="bg-white text-gray-900 font-sans">
     <!-- Navbar sticky -->
-    <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50 bg-white/80 backdrop-blur rounded-full shadow px-4 py-2 flex flex-wrap justify-center items-center gap-2 sm:gap-6 border border-gray-100 w-[95vw] max-w-2xl" data-aos="fade-down">
-      <a href="#hero" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Accueil</a>
-      <a href="#about" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">À propos</a>
-      <a href="#stacks" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Stacks</a>
-      <a href="#projets" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Projets</a>
-      <a href="#certifications" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Certifications</a>
-      <a href="#timeline" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Parcours</a>
-      <a href="#contact" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Contact</a>
+    <!-- Dark mode toggle -->
+    <button id="dark-toggle" class="fixed bottom-6 right-6 z-50 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition" title="Activer/désactiver le mode sombre">
+      <svg id="dark-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.95l-.71.71M21 12h-1M4 12H3m16.66 7.66l-.71-.71M4.05 4.05l-.71-.71" /></svg>
+    </button>
+
+    <!-- Retour en haut -->
+    <button id="scrollTopBtn" class="hidden fixed bottom-20 right-6 z-50 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition" title="Retour en haut">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+    </button>
+
+
+    <!-- Navbar desktop & hamburger mobile -->
+    <nav class="fixed top-2 left-1/2 -translate-x-1/2 z-50 bg-white/80 dark:bg-gray-900/90 backdrop-blur rounded-full shadow px-4 py-2 flex flex-wrap justify-center items-center gap-2 sm:gap-6 border border-gray-100 w-[95vw] max-w-2xl transition-all" data-aos="fade-down">
+      <div class="hidden md:flex w-full justify-center items-center gap-2 sm:gap-6">
+        <a href="#hero" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Accueil</a>
+        <a href="#about" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">À propos</a>
+        <a href="#stacks" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Stacks</a>
+        <a href="#projets" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Projets</a>
+        <a href="#certifications" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Certifications</a>
+        <a href="#timeline" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Parcours</a>
+        <a href="#contact" class="font-semibold text-gray-700 hover:text-blue-500 transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-blue-400 after:transition-all hover:after:w-full">Contact</a>
+      </div>
+      <!-- Hamburger button for mobile -->
+      <button id="hamburger-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-300 transition z-50" aria-label="Ouvrir le menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/></svg>
+      </button>
     </nav>
+
+    <!-- Overlay mobile menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-white/95 dark:bg-gray-900/95 z-[99] flex flex-col items-center justify-center gap-8 transition-all duration-300 opacity-0 pointer-events-none md:hidden">
+      <button id="close-menu" class="absolute top-6 right-6 text-gray-700 dark:text-white bg-blue-100 dark:bg-gray-800 rounded-full p-2 shadow focus:outline-none" aria-label="Fermer le menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="#hero" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Accueil</a>
+      <a href="#about" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">À propos</a>
+      <a href="#stacks" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Stacks</a>
+      <a href="#projets" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Projets</a>
+      <a href="#certifications" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Certifications</a>
+      <a href="#timeline" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Parcours</a>
+      <a href="#contact" class="text-2xl font-bold text-blue-700 dark:text-blue-300" onclick="closeMobileMenu()">Contact</a>
+    </div>
 
     <!-- Hero split-screen -->
     <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-tr from-blue-200 via-white to-blue-400 px-2 sm:px-4 relative overflow-hidden">
@@ -26,7 +59,12 @@
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 leading-tight text-blue-700">Jordane LUEMBA</h1>
         <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-blue-500">Développeur Créatif</h2>
         <p class="text-base sm:text-lg text-gray-700 mb-8 text-center md:text-left">J’imagine et réalise des expériences web modernes, élégantes et interactives.</p>
-        <a href="#projets" class="px-8 py-3 bg-blue-500 text-white rounded-full font-bold shadow-lg hover:bg-blue-600 transition">Découvrir mes projets</a>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a href="#projets" class="px-8 py-3 bg-blue-500 text-white rounded-full font-bold shadow-lg hover:bg-blue-600 transition">Découvrir mes projets</a>
+          <a href="cv.pdf" download class="px-8 py-3 bg-white text-blue-600 border-2 border-blue-500 rounded-full font-bold shadow hover:bg-blue-50 transition">Télécharger mon CV</a>
+        </div>
+          <!-- Compétences -->
+          
       </div>
       <div class="md:w-1/2 flex justify-center items-center relative w-full max-w-xl mx-auto md:mx-0 mt-10 md:mt-0" data-aos="zoom-in">
         <!-- SVG animé abstrait -->
@@ -57,6 +95,30 @@
         </div>
       </div>
     </section>
+
+    <section id="skills" class="py-16 bg-gradient-to-r from-blue-50 via-white to-blue-100 flex flex-col items-center px-2 sm:px-0" data-aos="fade-up">
+            <div class="max-w-3xl w-full text-center">
+              <h2 class="text-3xl font-bold mb-8 text-blue-700">Compétences</h2>
+              <div class="space-y-6">
+                <div class="text-left">
+                  <div class="flex justify-between mb-1"><span class="font-semibold">React</span><span>90%</span></div>
+                  <div class="w-full bg-blue-100 rounded-full h-3"><div class="bg-blue-500 h-3 rounded-full" style="width:90%"></div></div>
+                </div>
+                <div class="text-left">
+                  <div class="flex justify-between mb-1"><span class="font-semibold">Tailwind CSS</span><span>85%</span></div>
+                  <div class="w-full bg-blue-100 rounded-full h-3"><div class="bg-blue-400 h-3 rounded-full" style="width:85%"></div></div>
+                </div>
+                <div class="text-left">
+                  <div class="flex justify-between mb-1"><span class="font-semibold">JavaScript</span><span>95%</span></div>
+                  <div class="w-full bg-blue-100 rounded-full h-3"><div class="bg-blue-600 h-3 rounded-full" style="width:95%"></div></div>
+                </div>
+                <div class="text-left">
+                  <div class="flex justify-between mb-1"><span class="font-semibold">UI/UX</span><span>80%</span></div>
+                  <div class="w-full bg-blue-100 rounded-full h-3"><div class="bg-blue-300 h-3 rounded-full" style="width:80%"></div></div>
+                </div>
+              </div>
+            </div>
+          </section>
 
     <!-- Stacks -->
     <section id="stacks" class="py-16 bg-gradient-to-r from-blue-50 via-white to-purple-50 flex flex-col items-center px-2 sm:px-0" data-aos="fade-up">
@@ -219,6 +281,7 @@
       AOS.init();
       // WhatsApp contact
       document.addEventListener('DOMContentLoaded', function () {
+        // WhatsApp
         var btn = document.getElementById('whatsapp-btn');
         if (btn) {
           btn.addEventListener('click', function () {
@@ -229,6 +292,84 @@
             window.open('https://wa.me/243815829718?text=' + text, '_blank');
           });
         }
+
+        // Hamburger menu mobile
+        var hamburgerBtn = document.getElementById('hamburger-btn');
+        var mobileMenu = document.getElementById('mobile-menu-overlay');
+        var closeMenuBtn = document.getElementById('close-menu');
+        function openMobileMenu() {
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeMobileMenu() {
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.remove('opacity-100');
+          document.body.style.overflow = '';
+        }
+        window.closeMobileMenu = closeMobileMenu;
+        if (hamburgerBtn && mobileMenu && closeMenuBtn) {
+          hamburgerBtn.addEventListener('click', openMobileMenu);
+          closeMenuBtn.addEventListener('click', closeMobileMenu);
+          // Fermer menu sur navigation (liens)
+          mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', closeMobileMenu);
+          });
+        }
+
+        // Fermer menu sur resize desktop
+        window.addEventListener('resize', function () {
+          if (window.innerWidth >= 768) closeMobileMenu();
+        });
+
+        // Dark mode robuste et persistant
+        var darkBtn = document.getElementById('dark-toggle');
+        var html = document.documentElement;
+        var icon = document.getElementById('dark-icon');
+        // Applique le thème au chargement
+        function setDarkMode(dark) {
+          if (dark) {
+            html.classList.add('dark');
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.293 17.293A8 8 0 016.707 6.707a8.001 8.001 0 1010.586 10.586z" />';
+          } else {
+            html.classList.remove('dark');
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.95l-.71.71M21 12h-1M4 12H3m16.66 7.66l-.71-.71M4.05 4.05l-.71-.71" />';
+          }
+        }
+        // Initialisation : localStorage > préférence système > clair
+        var userTheme = localStorage.getItem('theme');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (userTheme === 'dark' || (!userTheme && systemDark)) {
+          setDarkMode(true);
+        } else {
+          setDarkMode(false);
+        }
+        // Toggle bouton
+        if (darkBtn) {
+          darkBtn.addEventListener('click', function () {
+            var isDark = html.classList.toggle('dark');
+            setDarkMode(isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          });
+        }
+        // Synchronisation si changement système
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+          if (!localStorage.getItem('theme')) {
+            setDarkMode(e.matches);
+          }
+        });
+        // Scroll to top button
+        var scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 400) {
+            scrollBtn.classList.remove('hidden');
+          } else {
+            scrollBtn.classList.add('hidden');
+          }
+        });
+        scrollBtn.addEventListener('click', function () {
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        });
       });
     </script>
   </body>
