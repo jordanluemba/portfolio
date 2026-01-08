@@ -20,11 +20,13 @@
     </nav>
 
     <!-- Hero split-screen -->
-    <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-tr from-blue-100 via-white to-purple-100 px-2 sm:px-4 relative overflow-hidden">
-      <div class="md:w-1/2 flex flex-col items-start z-10 w-full max-w-xl mx-auto md:mx-0" data-aos="fade-right">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Je suis <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Développeur Créatif</span></h1>
-        <p class="text-lg sm:text-xl text-gray-600 mb-8">J’imagine et réalise des expériences web modernes, élégantes et interactives.</p>
-        <a href="#projets" class="px-8 py-3 bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-full font-bold shadow-lg hover:scale-105 transition">Découvrir mes projets</a>
+    <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-tr from-blue-200 via-white to-blue-400 px-2 sm:px-4 relative overflow-hidden">
+      <div class="md:w-1/2 flex flex-col items-center md:items-start z-10 w-full max-w-xl mx-auto md:mx-0" data-aos="fade-right">
+        <img src="https://placehold.co/120x120" alt="Votre photo" class="rounded-full border-4 border-blue-400 shadow-lg mb-4 w-32 h-32 object-cover" />
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 leading-tight text-blue-700">Votre Nom</h1>
+        <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-blue-500">Développeur Créatif</h2>
+        <p class="text-base sm:text-lg text-gray-700 mb-8 text-center md:text-left">J’imagine et réalise des expériences web modernes, élégantes et interactives.</p>
+        <a href="#projets" class="px-8 py-3 bg-blue-500 text-white rounded-full font-bold shadow-lg hover:bg-blue-600 transition">Découvrir mes projets</a>
       </div>
       <div class="md:w-1/2 flex justify-center items-center relative w-full max-w-xl mx-auto md:mx-0 mt-10 md:mt-0" data-aos="zoom-in">
         <!-- SVG animé abstrait -->
@@ -34,8 +36,8 @@
           </circle>
           <defs>
             <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(200 200) rotate(90) scale(120)">
-              <stop stop-color="#a5b4fc" />
-              <stop offset="1" stop-color="#c4b5fd" stop-opacity="0.7" />
+              <stop stop-color="#3b82f6" />
+              <stop offset="1" stop-color="#60a5fa" stop-opacity="0.7" />
             </radialGradient>
           </defs>
         </svg>
@@ -76,37 +78,46 @@
 
     <!-- Projets détaillés -->
     <section id="projets" class="py-24 bg-white relative px-2 sm:px-0">
-      <h2 class="text-4xl font-bold mb-12 text-center" data-aos="fade-up">Mes Projets</h2>
+      <h2 class="text-4xl font-bold mb-12 text-center text-blue-700" data-aos="fade-up">Mes Projets</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl shadow-xl p-6 flex flex-col h-full" data-aos="flip-left">
-          <h3 class="font-semibold text-2xl mb-2">Portfolio Visionnaire</h3>
-          <p class="text-gray-600 mb-4">Landing page ultra moderne, animations AOS, responsive, glassmorphism, dark mode.</p>
-          <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
-            <li class="bg-white/70 px-2 py-1 rounded">React</li>
-            <li class="bg-white/70 px-2 py-1 rounded">Tailwind CSS</li>
-            <li class="bg-white/70 px-2 py-1 rounded">AOS.js</li>
-          </ul>
-          <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+        <div class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-3xl shadow-xl p-0 flex flex-col h-full" data-aos="flip-left">
+          <img src="https://placehold.co/400x220" alt="Projet 1" class="rounded-t-3xl w-full h-44 object-cover" />
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-2xl mb-2 text-blue-700">Portfolio Visionnaire</h3>
+            <p class="text-gray-600 mb-4">Landing page ultra moderne, animations AOS, responsive, glassmorphism, dark mode.</p>
+            <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
+              <li class="bg-white/70 px-2 py-1 rounded">React</li>
+              <li class="bg-white/70 px-2 py-1 rounded">Tailwind CSS</li>
+              <li class="bg-white/70 px-2 py-1 rounded">AOS.js</li>
+            </ul>
+            <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+          </div>
         </div>
-        <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl shadow-xl p-6 flex flex-col h-full" data-aos="flip-right">
-          <h3 class="font-semibold text-2xl mb-2">App Dashboard</h3>
-          <p class="text-gray-600 mb-4">Tableau de bord interactif, graphiques dynamiques, authentification sécurisée.</p>
-          <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
-            <li class="bg-white/70 px-2 py-1 rounded">Vue.js</li>
-            <li class="bg-white/70 px-2 py-1 rounded">D3.js</li>
-            <li class="bg-white/70 px-2 py-1 rounded">Firebase</li>
-          </ul>
-          <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+        <div class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-3xl shadow-xl p-0 flex flex-col h-full" data-aos="flip-right">
+          <img src="https://placehold.co/400x220" alt="Projet 2" class="rounded-t-3xl w-full h-44 object-cover" />
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-2xl mb-2 text-blue-700">App Dashboard</h3>
+            <p class="text-gray-600 mb-4">Tableau de bord interactif, graphiques dynamiques, authentification sécurisée.</p>
+            <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
+              <li class="bg-white/70 px-2 py-1 rounded">Vue.js</li>
+              <li class="bg-white/70 px-2 py-1 rounded">D3.js</li>
+              <li class="bg-white/70 px-2 py-1 rounded">Firebase</li>
+            </ul>
+            <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+          </div>
         </div>
-        <div class="bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl shadow-xl p-6 flex flex-col h-full" data-aos="flip-left">
-          <h3 class="font-semibold text-2xl mb-2">E-commerce NextGen</h3>
-          <p class="text-gray-600 mb-4">Boutique en ligne performante, paiement Stripe, animations micro-interactions.</p>
-          <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
-            <li class="bg-white/70 px-2 py-1 rounded">Next.js</li>
-            <li class="bg-white/70 px-2 py-1 rounded">Stripe API</li>
-            <li class="bg-white/70 px-2 py-1 rounded">Framer Motion</li>
-          </ul>
-          <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+        <div class="bg-gradient-to-br from-blue-100 to-blue-300 rounded-3xl shadow-xl p-0 flex flex-col h-full" data-aos="flip-left">
+          <img src="https://placehold.co/400x220" alt="Projet 3" class="rounded-t-3xl w-full h-44 object-cover" />
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-semibold text-2xl mb-2 text-blue-700">E-commerce NextGen</h3>
+            <p class="text-gray-600 mb-4">Boutique en ligne performante, paiement Stripe, animations micro-interactions.</p>
+            <ul class="text-sm text-gray-500 mb-4 flex flex-wrap gap-2">
+              <li class="bg-white/70 px-2 py-1 rounded">Next.js</li>
+              <li class="bg-white/70 px-2 py-1 rounded">Stripe API</li>
+              <li class="bg-white/70 px-2 py-1 rounded">Framer Motion</li>
+            </ul>
+            <a href="#" class="text-blue-500 hover:underline mt-auto">Voir plus</a>
+          </div>
         </div>
       </div>
     </section>
